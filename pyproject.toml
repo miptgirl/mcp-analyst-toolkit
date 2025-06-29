@@ -1,0 +1,20 @@
+[project]
+name = "mcp-analyst-toolkit"
+version = "0.1.0"
+description = "MCP server providing essential day-to-day tools for data analysts and researchers"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "datetime>=5.5",
+    "mcp[cli]>=1.10.1",
+    "pandas>=2.3.0",
+    "requests>=2.32.4",
+    "typing>=3.10.0.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/mcp_server"]
